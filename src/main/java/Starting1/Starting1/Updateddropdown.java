@@ -23,6 +23,7 @@ public class Updateddropdown {
 		
 		driver.findElement(By.id("divpaxinfo")).click();
 		Thread.sleep(2000L);
+		Thread.sleep(2000L);
 		
 		
 				
