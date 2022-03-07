@@ -14,7 +14,7 @@ public class Locators {
 		String name = "rahul";
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\G MAHESH\\OneDrive\\Documents\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://sso.teachable.com/secure/9521/identity/login");
 		driver.findElement(By.id("email")).sendKeys("rahul");
 		driver.findElement(By.name("password")).sendKeys("hello123");
