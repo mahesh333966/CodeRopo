@@ -15,10 +15,12 @@ public class Calendar {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.path2usa.com/travel-companions");   
 		driver.findElement(By.id("travel_date")).click();
+		while(!driver.findElement(By.cssSelector("[class='datepicker-days'] [class='datepicker-switch']")).getText().contains("June"))
+		{
+			driver.findElement(By.cssSelector("[class='datepicker-days'] th[class='next']")).click();
+		}
 		
-		
-		
-		List<WebElement> dates= driver.findElements(By.className("day"));
+		List<WebElement> dates = driver.findElements(By.className("day"));
 		int count=driver.findElements(By.className("day")).size();
 		for(int i=0; i<count; i++)
 		{
